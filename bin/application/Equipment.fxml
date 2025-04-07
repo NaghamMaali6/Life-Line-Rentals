@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EquipmentController">
+   <children>
+      <ImageView fx:id="image" fitHeight="579.0" fitWidth="764.0" layoutX="-41.0" layoutY="-37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../medica-modelo.jpg" />
+         </image>
+      </ImageView>
+      <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="139.0" text="Equipment">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleViewMenuItem" text="View all equipment" />
+            <MenuItem mnemonicParsing="false" onAction="#handleSearchForEquipment" text="Search for equipment" />
+            <MenuItem mnemonicParsing="false" onAction="#handelCheckAvailability" text="Check equipment availability" />
+            <MenuItem mnemonicParsing="false" onAction="#handleUpdateEquipmentItem" text="Update equipment" />
+            <MenuItem mnemonicParsing="false" onAction="#handel_AddSupplier" text="Add Supplier" />
+            <MenuItem mnemonicParsing="false" onAction="#handleViewEquipmentLocationItem" text="View equipment location " />
+            <MenuItem mnemonicParsing="false" onAction="#handelDeleteMenuItem" text="Delete equipment  " />
+           
+         </items>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </MenuButton>
+      <TableView fx:id="EquipmentTable" layoutX="3.0" layoutY="75.0" prefHeight="251.0" prefWidth="651.0" visible="false">
+         <columns>
+            <TableColumn fx:id="Equipment_Number" prefWidth="114.0" text="Equipment Number" />
+            <TableColumn fx:id="Equipment_Name" prefWidth="103.0" text="Equipment Name" />
+            <TableColumn fx:id="Availability" prefWidth="71.0" text="Availability" />
+            <TableColumn fx:id="Location_Number" prefWidth="108.0" text="Location Number" />
+            <TableColumn fx:id="Supplier_Number" prefWidth="102.0" text="Supplier Number" />
+            <TableColumn fx:id="Equipment_Use" prefWidth="148.0" text="Equipment Use" />
+         </columns>
+      </TableView>
+      <Button fx:id="close" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleCloseButton" text="Close" visible="false" />
+      <TextField fx:id="textfield" layoutX="253.0" layoutY="30.0" prefHeight="29.0" prefWidth="151.0" promptText="Search" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="search" layoutX="200" layoutY="30.0" mnemonicParsing="false" onAction="#handleSearchForEquipment_buton" text="Search" visible="false" />
+      <Button fx:id="check" layoutX="124.0" layoutY="96.0" mnemonicParsing="false" onAction="#CheckAvailability" text="Check Availability" visible="false" />
+      <TextField fx:id="checktextfield" layoutX="244.0" layoutY="96.0" visible="false" />
+      <Label fx:id="checklable" layoutX="220.0" layoutY="187.0" prefHeight="27.0" prefWidth="231.0" text="status" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Update" layoutX="65.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleUpdateEquipment" text="Update" visible="false" />
+      <TextField fx:id="newName" layoutX="192.0" layoutY="329.0" promptText="New Name" visible="false" />
+      <TextField fx:id="newAvailability" layoutX="192.0" layoutY="362.0" promptText="New Availability" visible="false" />
+      <TextField fx:id="newLocation_Number" layoutX="192.0" layoutY="395.0" promptText="New Location Number" visible="false" />
+      <Label fx:id="newname" layoutX="120.0" layoutY="329.0" text="Name:" visible="false" />
+      <Label fx:id="newAv" layoutX="120.0" layoutY="362.0" text="Availability:" visible="false" />
+      <Label fx:id="newloc" layoutX="120.0" layoutY="395.0" text="Location:" visible="false" />
+      <TextField fx:id="sup_number_field" layoutX="275.0" layoutY="108.0" promptText="Supplier Number" visible="false" />
+      <TextField fx:id="sup_phone_field" layoutX="275.0" layoutY="201.0" promptText="Phone Number" visible="false" />
+      <TextField fx:id="sup_name_feild" layoutX="275.0" layoutY="152.0" promptText="Supplier Name" visible="false" />
+      <TextField fx:id="eq_sup_numberField" layoutX="93.0" layoutY="139.0" promptText="Equipment Number" visible="false" />
+      <TextField fx:id="eq_sup_availabilityField" layoutX="93.0" layoutY="174.0" promptText="Equipment Availability" visible="false" />
+      <TextField fx:id="eq_sup_equipmentuseField" layoutX="93.0" layoutY="290.0" promptText="Equipment use" visible="false" />
+      <TextField fx:id="eq_sup_nameField" layoutX="93.0" layoutY="108.0" promptText="Equipment Name" visible="false" />
+      <TextField fx:id="eq_sup_supnumberField" layoutX="93.0" layoutY="251.0" promptText="Supplier Number" visible="false" />
+      <TextField fx:id="eq_sup_locationnumberField" layoutX="93.0" layoutY="213.0" promptText="Location Number" visible="false" />
+      <Label fx:id="labl1_1" layoutX="69.0" layoutY="82.0" text="Equipment information" visible="">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lable_2" layoutX="268.0" layoutY="82.0" text="Supplier information" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="Add_supplier" layoutX="295.0" layoutY="253.0" mnemonicParsing="false" onAction="#handle_AddSupplier" prefHeight="46.0" prefWidth="109.0" text="Add Supplier" visible="false" />
+      <TextField fx:id="location_address_field" layoutX="94.0" layoutY="325.0" promptText="Equipment location" visible="false" />
+      <TextField fx:id="location_phone_field" layoutX="93.0" layoutY="362.0" promptText="Location Phone Number" visible="false" />
+      <TextField fx:id="eq_name" layoutX="275.0" layoutY="62.0" promptText="Equipment Name" visible="false" />
+      <Button fx:id="view_location" layoutX="207.0" layoutY="62.0" mnemonicParsing="false" onAction="#handelLocationButton" text="Button" visible="false" />
+      <Label fx:id="location_lable" layoutX="259.0" layoutY="121.0" prefHeight="66.0" prefWidth="453.0" text="Label" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="Delete" layoutX="190.0" layoutY="62.0" mnemonicParsing="false" onAction="#handleDeleteEquipment" prefHeight="17.0" prefWidth="60.0" text="Delete" visible="false" />
+      <TextField fx:id="eq_de_name_field" layoutX="266.0" layoutY="62.0" promptText="Enter Equipment Name" visible="false" />
+      
+      <Button fx:id="Back" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="46.0" prefWidth="95.0" text="Go Back" />
+   </children>
+</AnchorPane>

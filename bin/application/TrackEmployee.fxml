@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="667.0" prefWidth="1283.0" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TrackEmployeeController">
+    <TableView fx:id="RentalTable" layoutX="14.0" layoutY="58.0" prefHeight="337.0" prefWidth="1279.0" style="-fx-background-color: WHITE; -fx-border-color: #5a99a1;"> <!-- TableView to display the list of rentals -->
+        <columns> <!-- Define the columns of the table (Each TableColumn represents a property of the Rental object) -->
+            <TableColumn fx:id="colRentalNumber" prefWidth="157.0" style="-fx-textAlignment: CENTER;" text="Rental Number" />
+            <TableColumn fx:id="colCustomerNumber" prefWidth="157.0" style="-fx-textAlignment: CENTER;" text="Customer Number" />
+            <TableColumn fx:id="colEmployeeNumber" prefWidth="157.0" style="-fx-textAlignment: CENTER;" text="Employee Number" />
+            <TableColumn fx:id="colEquipmentNumber" prefWidth="157.0" style="-fx-textAlignment: CENTER;" text="Equipment Number" />
+            <TableColumn fx:id="colInvoiceNumber" prefWidth="157.0" style="-fx-textAlignment: CENTER;" text="Invoice Number" />
+            <TableColumn fx:id="colStartDate" prefWidth="157.0" style="-fx-textAlignment: CENTER;" text="Start Date" />
+            <TableColumn fx:id="colEndDate" prefWidth="140.0" style="-fx-textAlignment: CENTER;" text="End Date" />
+            <TableColumn fx:id="colContractImage" prefWidth="195.0" style="-fx-textAlignment: CENTER;" text="Contract Image" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="rentalNumberField" promptText="Enter Rental Number" />
+        <Button onAction="#handleFindEmployee" text="Find Employee" />
+    </HBox>
+    <Label fx:id="employeeInfo" text="Employee Information will be displayed here." wrapText="true" />
+</VBox>

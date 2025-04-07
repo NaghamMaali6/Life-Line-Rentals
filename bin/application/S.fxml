@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- Specifies the XML version and encoding -->
+
+<?import javafx.scene.control.Button?>  <!-- Import the Button class for UI -->
+<?import javafx.scene.control.Label?>  <!-- Import the Label class for text display -->
+<?import javafx.scene.image.ImageView?>  <!-- Import the ImageView class to display images -->
+<?import javafx.scene.layout.AnchorPane?>  <!-- Import the AnchorPane layout for organizing elements -->
+<?import javafx.scene.text.Font?>  <!-- Import the Font class for customizing text appearance -->
+
+<AnchorPane prefHeight="402.0" prefWidth="517.0" style="-fx-background-color: #deebed;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SController">  <!-- Define the root layout as an AnchorPane with specified width and height -->
+    <Label layoutX="101.0" layoutY="14.0" text="Employee Sign-in/Sign-up">  <!-- Label to display the title of the scene -->
+      <font>
+         <Font name="Times New Roman Bold" size="30.0" />  <!-- Define font style and size for the label -->
+      </font></Label>
+    <ImageView fx:id="logo" fitHeight="190.0" fitWidth="251.0" layoutX="140.0" layoutY="71.0" preserveRatio="true" />  <!-- ImageView to display the logo image -->
+    <!-- fx:id links this element to the controller -->
+    <!-- fitHeight and fitWidth specify the size of the image -->
+    <!-- preserveRatio ensures the aspect ratio of the image is maintained -->
+    
+    <Button fx:id="signInButton" layoutX="202.0" layoutY="272.0" onAction="#handleSignInAction" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: #5a99a1;" text="Sign-In" textFill="WHITE">
+      <font>
+         <Font name="Times New Roman Bold" size="20.0" />
+      </font></Button>  <!-- Button for the Sign-In action -->
+    <Button fx:id="signUpButton" layoutX="201.0" layoutY="314.0" onAction="#handleSignUpAction" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: #5a99a1;" text="Sign-Up" textFill="WHITE">
+      <font>
+         <Font name="Times New Roman Bold" size="20.0" />
+      </font></Button>  <!-- Button for the Sign-Up action -->
+    <!-- fx:id connects the button to the controller -->
+    <!-- layoutX and layoutY specify the position of the button -->
+    <!-- onAction specifies the method in the controller to handle this button's action -->
+    <!-- style defines the background color of the button -->
+    <!-- textFill specifies the color of the text on the button -->
+    
+</AnchorPane>

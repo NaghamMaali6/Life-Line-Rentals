@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+
+<AnchorPane prefHeight="397.0" prefWidth="458.0" style="-fx-background-color: #deebed;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddEmployeeController">
+    <children>
+        <!-- Labels -->
+        <Label layoutX="50.0" layoutY="115.0" text="Employee Number:">
+           <font>
+         <Font name="Times New Roman Bold" size="22.0" />
+           </font>
+         </Label>
+        <Label layoutX="50.0" layoutY="165.0" text="Name:">
+      <font>
+         <Font name="Times New Roman Bold" size="22.0" />
+      </font>
+      </Label>
+        <Label layoutX="50.0" layoutY="205.0" text="Start Date:">
+      <font>
+         <Font name="Times New Roman Bold" size="22.0" />
+      </font>
+      </Label>
+        <Label layoutX="50.0" layoutY="250.0" text="End Date:">
+      <font>
+         <Font name="Times New Roman Bold" size="22.0" />
+      </font>
+      </Label>
+
+        <!-- Input Fields -->
+        <TextField fx:id="employeeNumberField" layoutX="170.0" layoutY="110.0" promptText="Enter Employee Number" />
+        <TextField fx:id="nameField" layoutX="170.0" layoutY="160.0" promptText="Enter Name" />
+        <DatePicker fx:id="startDatePicker" layoutX="170.0" layoutY="200.0" promptText="Select Start Date" />
+        <DatePicker fx:id="endDatePicker" layoutX="170.0" layoutY="245.0" promptText="Select End Date" />
+
+        <!-- Buttons -->
+        <Button fx:id="saveButton" layoutX="252.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" style="-fx-background-color: #5a99a1;" text="Save" textAlignment="CENTER" textFill="WHITE">
+        <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+      </font>
+   </Button>
+        <Button fx:id="Back" layoutX="246.0" layoutY="342.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: #5a99a1;" text="Back!" textAlignment="CENTER" textFill="WHITE" underline="true">
+      <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+      </font>
+   </Button>
+    </children>
+</AnchorPane>

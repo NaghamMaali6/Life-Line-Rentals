@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="593.0" prefWidth="1105.0" style="-fx-background-color: #deebed;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InvoiceController">
+	<Label layoutX="14.0" layoutY="23.0" prefHeight="17.0" prefWidth="120.0" text="Invoices:">
+      <font>
+         <Font name="Times New Roman Bold" size="22.0" />
+      </font>
+   </Label>
+   <Button fx:id="Back" layoutX="1038.0" layoutY="546.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="22.0" prefWidth="53.0" style="-fx-background-color: #5a99a1;" text="Back!" textAlignment="CENTER" textFill="WHITE" underline="true">
+      <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+      </font>
+   </Button>
+   <TableView fx:id="InvoiceTable" layoutX="14.0" layoutY="63.0" prefHeight="384.0" prefWidth="1072.0" style="-fx-background-color: WHITE; -fx-border-color: #5a99a1;">
+     <columns>
+       <TableColumn fx:id="I_No" prefWidth="120.0" style="-fx-textAlignment: CENTER;" text="Invoice Number" />
+       <TableColumn fx:id="totalAmount" prefWidth="117.0" style="-fx-textAlignment: CENTER;" text="Total Amount" />
+         <TableColumn fx:id="discount" prefWidth="112.0" style="-fx-textAlignment: CENTER;" text="Discount" />
+         <TableColumn fx:id="status" prefWidth="164.0" style="-fx-textAlignment: CENTER;" text="Payment Status" />
+         <TableColumn fx:id="I_Date" prefWidth="164.0" style="-fx-textAlignment: CENTER;" text="Invoice Date" />
+         <TableColumn fx:id="Due_Date" prefWidth="164.0" style="-fx-textAlignment: CENTER;" text="Due Date" />
+         <TableColumn fx:id="type" prefWidth="229.0" style="-fx-textAlignment: CENTER;" text="Invoice Type" />
+     </columns>
+   </TableView>
+</AnchorPane>

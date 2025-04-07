@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- Specifies the XML version and encoding -->
+
+<?import javafx.scene.control.Button?>  <!-- Import for Button UI component -->
+<?import javafx.scene.control.Label?>  <!-- Import for Label to display text -->
+<?import javafx.scene.image.ImageView?>  <!-- Import for ImageView to display images -->
+<?import javafx.scene.layout.AnchorPane?>  <!-- Import for ImageView to display images -->
+<?import javafx.scene.text.Font?>  <!-- Import the Font class for customizing text appearance -->
+
+<AnchorPane prefHeight="699.0" prefWidth="1186.0" style="-fx-background-color: #deebed;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TablesController">  <!-- Define the root layout as an AnchorPane with specified width and height -->
+   <children>
+      <Label layoutX="359.0" layoutY="33.0" prefHeight="34.0" prefWidth="438.0" text="Welcome to LifeRental!" textAlignment="CENTER">  <!-- Welcome message at the top center -->
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />  <!-- Styling for the text -->
+         </font>
+      </Label>
+      
+      <Label layoutX="463.0" layoutY="77.0" prefHeight="24.0" prefWidth="122.0" text="choose one ...">  <!-- choose one instruction label -->
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />  <!-- Styling for the text -->
+         </font>
+      </Label>
+      
+      <!-- Buttons for each table: -->
+      <Button fx:id="CustomerB" layoutX="63.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Customer" textFill="WHITE" onAction="#btnCustomer">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="LocationB" layoutX="66.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Location" textFill="WHITE" onAction="#btnLocation">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="EquipmentB" layoutX="284.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Equipment" textFill="WHITE" onAction="#btnEquipment">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="RentalB" layoutX="497.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Rental" textFill="WHITE" onAction="#btnRental">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="PaymentB" layoutX="687.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Payment" textAlignment="CENTER" textFill="WHITE" onAction="#btnPayment">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="InvoiceB" layoutX="883.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Invoice" textFill="WHITE" onAction="#btnInvoice">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="EmployeeB" layoutX="287.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Employee" textFill="WHITE" onAction="#btnEmployee">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="SupplierB" layoutX="492.0" layoutY="526.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Supplier" textFill="WHITE" onAction="#btnSupplier">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="Maintenance_RequestB" layoutX="647.0" layoutY="526.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Maintenance_Request" textFill="WHITE" onAction="#btnMaintenance_Request">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="WorkshopB" layoutX="876.0" layoutY="527.0" mnemonicParsing="false" style="-fx-background-color: #5a99a1;" text="Workshop" textFill="WHITE" onAction="#btnWorkshop">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      
+      <!-- Images for each table: -->
+      <ImageView fx:id="Customer" fitHeight="152.0" fitWidth="173.0" layoutX="20.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Equipment" fitHeight="152.0" fitWidth="173.0" layoutX="245.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Rental" fitHeight="152.0" fitWidth="173.0" layoutX="450.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Payment" fitHeight="152.0" fitWidth="173.0" layoutX="644.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Location" fitHeight="152.0" fitWidth="173.0" layoutX="19.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Employee" fitHeight="152.0" fitWidth="173.0" layoutX="253.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Invoice" fitHeight="152.0" fitWidth="173.0" layoutX="836.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Supplier" fitHeight="152.0" fitWidth="173.0" layoutX="445.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Maintenance_Request" fitHeight="152.0" fitWidth="173.0" layoutX="641.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Workshop" fitHeight="152.0" fitWidth="173.0" layoutX="837.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true" />
+      
+      <!-- Logout Button and image: -->
+      <Button fx:id="LogoutB" layoutX="471.0" layoutY="618.0" mnemonicParsing="false" onAction="#btnlog_out" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #5a99a1;" text="Log-out!" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />  <!-- Styling for the text -->
+         </font>
+      </Button>
+      <ImageView fx:id="Logout" fitHeight="71.0" fitWidth="92.0" layoutX="385.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true" />
+      
+   </children>
+</AnchorPane>

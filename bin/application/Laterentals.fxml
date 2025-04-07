@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LaterentalsController">
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Late Rentals" />
+    
+    <TableView fx:id="lateRentalTable" prefHeight="300" prefWidth="550">
+        <columns>
+            <TableColumn fx:id="rentalNumberColumn" prefWidth="150" text="Rental Number" />
+            <TableColumn fx:id="equipmentNumberColumn" prefWidth="253.59991455078125" text="Equipment Number" />
+            <TableColumn fx:id="statusColumn" prefWidth="192.800048828125" text="Status" />
+        </columns>
+    </TableView>
+    
+    <Button onAction="#handleLoadLateRentals" text="Load Late Rentals" />
+</VBox>

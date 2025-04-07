@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Specifies the XML version and encoding -->
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- Imports JavaFX controls (e.g., buttons, labels) -->
+<!-- Imports JavaFX image-related components -->
+<!-- Imports JavaFX layout components (e.g., AnchorPane, HBox, VBox) -->
+<!-- xmlns:fx defines the namespace for JavaFX -->
+<!-- fx:controller specifies the controller class associated with this FXML file -->
+
+<AnchorPane prefHeight="614.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CoverPageController">  <!-- AnchorPane is used as the root layout for the scene -->
+    <children>  <!-- Container for all child elements of the AnchorPane -->
+        <ImageView fx:id="coverImage" fitHeight="600" fitWidth="850.0" layoutY="7.0" preserveRatio="true" />  <!-- ImageView is used to display the cover page image -->
+        <!-- The fx:id attribute connects this ImageView to the SampleController -->
+        <!-- fitWidth and fitHeight control the image's size within the view -->
+        <!-- preserveRatio ensures the image keeps its aspect ratio when resized -->
+    </children>
+</AnchorPane>
