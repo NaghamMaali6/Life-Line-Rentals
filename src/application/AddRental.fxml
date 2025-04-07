@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application.AddRentalController">
+    <children>
+        <!-- Title -->
+        <Label text="Add Rental" style="-fx-font-size: 18px;"/>
+
+        <!-- GridPane for Input Fields -->
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <!-- Customer Details -->
+            <Label text="Customer Number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="customerNumberField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="National ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="nationalIDField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Full Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="fullNameField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Address:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="addressField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Phone Number:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="phoneNumberField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Insurance (Yes/No):" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="insuranceField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            <!-- Rental Details -->
+            <Label text="Equipment Number:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <TextField fx:id="equipmentNumberField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+            <Label text="Employee Number:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <TextField fx:id="employeeNumberField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+            <Label text="Start Date (YYYY-MM-DD):" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+            <TextField fx:id="startDateField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+            <Label text="End Date (YYYY-MM-DD):" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+            <TextField fx:id="endDateField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+            <!-- Invoice Details -->
+            <Label text="Invoice Number:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+            <TextField fx:id="invoiceNumberField" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+            <Label text="Total Amount:" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+            <TextField fx:id="totalAmountField" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+            <Label text="Discount:" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+            <TextField fx:id="discountField" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+
+            <Label text="Payment Status:" GridPane.rowIndex="13" GridPane.columnIndex="0"/>
+            <TextField fx:id="paymentStatusField" GridPane.rowIndex="13" GridPane.columnIndex="1"/>
+
+            <!-- Payment Details -->
+            <Label text="Price per Day:" GridPane.rowIndex="14" GridPane.columnIndex="0"/>
+            <TextField fx:id="pricePerDayField" GridPane.rowIndex="14" GridPane.columnIndex="1"/>
+
+            <Label text="Payment Method:" GridPane.rowIndex="15" GridPane.columnIndex="0"/>
+            <TextField fx:id="paymentMethodField" GridPane.rowIndex="15" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Submit Button -->
+        <Button text="Add Rental" onAction="#handleAddRental"/>
+        
+        <!-- Status Label -->
+        <Label fx:id="statusLabel" style="-fx-text-fill: red;"/>
+    </children>
+</VBox>

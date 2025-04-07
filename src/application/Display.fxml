@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DisplayController">
+    <children>
+        <!-- DatePicker for selecting the start date -->
+        <DatePicker fx:id="startDate" layoutX="20.0" layoutY="20.0" promptText="Start Date"/>
+        
+        <!-- DatePicker for selecting the end date -->
+        <DatePicker fx:id="endDate" layoutX="220.0" layoutY="20.0" promptText="End Date"/>
+        
+        <!-- Button to trigger the rental search -->
+        <Button layoutX="420.0" layoutY="20.0" text="Find Rentals" onAction="#findRentals"/>
+        
+        <!-- Text to display results or error messages -->
+        <Text fx:id="resultText" layoutX="20.0" layoutY="60.0" wrappingWidth="560.0"/>
+        
+        <!-- TableView to display the rental data -->
+        <TableView fx:id="rentalTable" layoutX="20.0" layoutY="100.0" prefHeight="300.0" prefWidth="560.0">
+            <columns>
+                <!-- Define TableColumns for Rental properties -->
+                <TableColumn fx:id="rentalNumberColumn" text="Rental Number" prefWidth="80.0"/>
+                <TableColumn fx:id="customerNumberColumn" text="Customer Number" prefWidth="100.0"/>
+                <TableColumn fx:id="employeeNumberColumn" text="Employee Number" prefWidth="100.0"/>
+                <TableColumn fx:id="equipmentNumberColumn" text="Equipment Number" prefWidth="100.0"/>
+                <TableColumn fx:id="invoiceNumberColumn" text="Invoice Number" prefWidth="100.0"/>
+                <TableColumn fx:id="startDateColumn" text="Start Date" prefWidth="80.0"/>
+                <TableColumn fx:id="endDateColumn" text="End Date" prefWidth="80.0"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
